@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.fleckmesh.mobile"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Fleckmesh Mobile</name>
+
+    <description>
+        The mobile app for the fleckmesh web application to improve accessibility and usabilty.
+    </description>
+
+    <author href="https://www.fleckmesh.com" email="dinyangetoh@fleckmesh.com">
+        David Inyang-Etoh 
+    </author>
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+
+</widget>
