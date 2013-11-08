@@ -47,7 +47,7 @@ $.mobile.allowCrossDomainPages = true;
           
                      $.each(result, function(index,value){
                       console.log(value.name);
-                       $('.cities').append('<li><a href="#babies" data-val="'+ value.name +'"><img src="http://localhost/fleck/images/flecks/gallery/'+ value.logo +'"><h4>'+ value.name +'</h4><p>'+ value.description +'</p><p><small>'+ value.address +' | '+ value.phone +'</small></p></a></li>');
+                       $('.cities').append('<li><a href="#babies" data-val="'+ value.name +'"><img src="http://beta.fleckmesh.com/images/flecks/gallery/'+ value.logo +'"><h4>'+ value.name +'</h4><p>'+ value.description +'</p><p><small>'+ value.address +' | '+ value.phone +'</small></p></a></li>');
                         });
                         $('.cities').listview("refresh");
                       }});
