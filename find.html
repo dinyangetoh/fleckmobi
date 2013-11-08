@@ -6,49 +6,74 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Contact Search</title>
+       <head>
+        <title>Fleckmesh Mobile Beta</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initialscale=1">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+         <link rel="stylesheet" href="css/bootstrap.css" />
         <script src="js/libs/jquery/jquery.js"></script>
         <script src="js/libs/jquery/jquery.mobile-1.3.2.min.js"></script>
+    <script src="js/hogan-2.0.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.slidorion.js"></script>
+     <script src="js/typeahead.min.js"></script>
+     <script src="js/jqm.autoComplete-1.5.2.js"></script>
+	<script src="js/code.js"></script>
     
+        
 </head>
 <body>
-    <div data-role="page">
-        <div data-role="header">
-            <h1>Fleck Mobile</h1>
-        </div>
+    <div data-role="page" id="mainPage">
+        <div data-role="header" data-position="fixed" class="header profile-footer">
+		
+       <img src="images/logo.png" align="left">
+       <div data-role="fieldcontain">
+    
+</div>
+      
+        
+	</div>
         <div data-role="content">
-            <p>
-            Fleckmesh was coined from two English words – fleck (spot, dot or to mark) and mesh (a network of). These simplify Fleckmesh as “a network of dots”. It was born out of the ideology that everything in the world or in reality can be represented or depicted as “a dot” in a virtual space that maybe a group of items with similar attributes or functions. These groups maybe related by unique individual functions performed to satisfy a general need or by competitions and other factors peculiar to them.
-            </p>
-            <ul data-role="listview" data-inset="true">
-<li data-role="list-divider">Active</li>
-<li>Raymond Camden</li>
-<li>Scott Stroz</li>
-<li>Todd Sharp</li>
-<li data-role="list-divider">Archived</li>
-<li>Dave Ferguson</li>
-</ul>
-            <ul data-role="listview" data-inset="true">
-<li><a href="find.html">Find Us</a></li>
-<li><a href="rooms.html">Our Rooms</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-<li><a href="">Non-Mobile Site</a></li>
-</ul>
+            
+            <script>
+        
+    //$(".result").html(result);
+                  
+                      $.ajax({url:"http://localhost/fleck/api/flecks",success:function(result){
+          
+                     $.each(result, function(index,value){
+                      console.log(value.name);
+                       $('.result').append('<li><a href="#babies" data-val="'+ value.name +'"><img src="http://localhost/fleck/images/flecks/gallery/'+ value.logo +'">'+ value.name +'</a></li>');
+                        });
+                        $('.result').listview("refresh");
+                      }});
+    
+
+        </script>
+            <p>Still Loading</p>
+            
+            
+              
+            <ul data-role="listview" class="result" data-inset="true">
+
+
+            </ul>
             </div>
         
-         <div data-role="footer" data-position="fixed">
-             <h4><i>&copy; 2013 Fleck Mobile. All rights reserved</i></h4>
-        </div>
-    </div>
-   
-
-<div data-role="footer" data-position="fixed"><h4>My
-Footer</h4></div>
+       <div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+        <ul>
+            
+            <li><a href="index.html" data-icon="home" data-theme="b" class="ui-btn-active">Home</a></li>
+            <li><a href="city.html" data-icon="star" data-theme="b">Cities</a></li>
+            <li><a href="flecks.html" data-icon="grid" data-theme="b">Flecks</a></li>
+           
+        </ul>
 </div>
-  
+  </div><!-- /navbar -->
 </body>
 </html>
   
