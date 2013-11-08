@@ -2,8 +2,8 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.fleckmesh.mobile"
-        versionCode="103" 
-        version   = "1.0.3">
+        versionCode="104" 
+        version   = "1.0.4">
 
     <!-- versionCode is optional and Android only -->
 
@@ -12,6 +12,7 @@
     <description>
         The mobile app for the fleckmesh web application to improve accessibility and usabilty.
     </description>
+<access origin="http://beta.fleckmesh.com/*" />
 
     <author href="https://www.fleckmesh.com" email="dinyangetoh@fleckmesh.com">
         David Inyang-Etoh 
